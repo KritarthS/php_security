@@ -1,0 +1,527 @@
+// Fonts and Colors ----------------------------/
+$h1-big: 60px;
+$h1: 40px;
+$h2: 30px;
+$h3: 26px;
+$h4: 20px;
+$p: 18px;
+$p2: 15px;
+
+$grey: #E5E5E5;
+$grey-d: #CCCCCC;
+$white: #FFFFFF;
+$blue: #1B75BC;
+$yellow: #FEDA00;
+$black: #000000;
+
+$font: 'Raleway', sans-serif;
+
+
+// Grid and Breakpoints ----------------------------/
+
+$grid-columns:      12;
+$grid-gutter-width: 30px;
+
+$grid-breakpoints: (
+  // Extra small screen / phone
+  xs: 0,
+  // Small screen / phone
+  sm: 576px,
+  // Medium screen / tablet
+  md: 768px,
+  // Large screen / desktop
+  lg: 1200px,
+  // Extra large screen / wide desktop
+  xl: 1680px
+);
+
+$container-max-widths: (
+  sm: 540px,
+  md: 720px,
+  lg: 1140px,
+  xl: 1620px
+);
+
+// Landing Page ----------------------------/
+
+*{
+  font-family: $font;
+}
+
+html{
+  width: 100vw;
+  scroll-behavior: smooth;
+}
+
+body{
+  overflow-x: hidden;
+}
+
+.headLine{
+  background-color: $black;
+  height: 4px;
+  width: 200px;
+  border-radius: 2px;
+  margin-bottom: 20px;
+}
+
+
+.head{
+  margin: 10px;
+  position: relative;
+  width: 100vw;
+  .logo{
+    position: absolute;
+    text-align: center;
+    img{
+      margin: 20px;
+      @media (max-width: 575.98px) {
+        width: 250px;
+        margin-bottom: 50px;
+        margin-left: 15px;
+      }
+    }
+  }
+  .nav{
+    position: fixed;
+    top: 0px;
+    right: 20px;
+    margin-top: 30px;
+    z-index: 1;
+    @media (max-width: 575.98px) {
+      display: none;
+    }
+    ul{
+      list-style: none;
+      padding: 40px;
+      text-align: left;
+      margin-left: 750px;
+      i{
+        font-size: $h4;
+        color: $blue;
+      }
+      .nav_cell{
+        text-decoration: none;
+        padding-left: 10px;
+        font-size: $h3;
+        font-weight: 600;
+        color: $black;
+        transition: all .3s ease;
+        &:hover{
+          color: $blue;
+        }
+      }
+    }
+  }
+}
+
+.header{
+  background: url("../imgs/banner.jpg");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
+  text-align: center;
+  height: 85vh;
+  width: 100vw;
+  transition: all .3s ease;
+  @media (max-width: 575.98px) {
+    background: none;
+    background-color: $blue;
+    margin-top: 85px;
+    height: 90vh;
+    margin-left: 0px;
+  }
+  h1{
+    text-align: center;
+    font-weight: 700;
+    font-size: $h1-big;
+    margin-top: 7%;
+    @media (max-width: 575.98px) {
+      font-size: $h2;
+      text-align: center;
+      margin-top: 7%;
+      color: $white;
+    }
+  }
+}
+
+#contForm{
+  width: 90%;
+  position: relative;
+  form{
+    position: absolute;
+    left: 110%;
+    width: 460px;
+    background-color: $white;
+    margin-top: -60%;
+    border-radius: 15px;
+    padding: 30px 0px;
+    box-shadow: -3px 3px $grey-d;
+    @media (max-width: 575.98px) {
+      position: absolute;
+      left: 20px;
+      width: 335px;
+      margin-top: -450px;
+      padding: 10px 0px;
+    }
+    h3{
+      display: block;
+      text-align: center;
+      font-size: $h2;
+      width: 80%;
+      margin: 0 auto;
+      @media (max-width: 575.98px){
+        font-size: $h4;
+        padding-top: 20px;
+      }
+    }
+    #formLine{
+      background-color: $black;
+      height: 4px;
+      width: 150px;
+      border-radius: 2px;
+      margin: 50px auto;
+      @media (max-width: 575.98px){
+        margin: 20px auto;
+      }
+    }
+    input{
+      display: block;
+      margin: 20px auto;
+      padding: 20px;
+      width: 70%;
+      border-radius: 10px;
+      background-color: $grey;
+      border-style: none;
+      @media (max-width: 575.98px){
+        padding: 10px;
+      }
+    }
+    #submit{
+      width: 50%;
+      background-color: $blue;
+      font-size: $h4;
+      color: $white;
+      margin-top: 50px;
+      @media (max-width: 575.98px){
+        margin-top: 20px;
+      }
+    }
+  }
+}
+
+// Services -------------------------------------------/
+
+#serviceHead{
+  margin-top: 5%;
+  @media (max-width: 575.98px){
+    margin-left: 10px;
+    margin-top: 20px;
+  }
+  h2{
+    @media (max-width: 575.98px){
+      font-size: $h4;
+      margin-top: 5px;
+    }
+  }
+}
+
+.serviceCont{
+  margin: 50px;
+  p{
+    font-size: $h4;
+    @media (max-width: 575.98px){
+      font-size: $p2;
+    }
+  }
+  @media (max-width: 575.98px){
+    margin: 0px;
+  }
+}
+
+.services{
+  display: block;
+  text-align: center;
+  margin-bottom: 10%;
+  .serv{
+    display: inline-block;
+    width: 18%;
+    @media (max-width: 575.98px){
+      width: 40%;
+    }
+    img{
+      width: 80%;
+    }
+    h4{
+      font-size: $p;
+      text-align: center;
+    }
+  }
+}
+
+.whyHead{
+  @media (max-width: 575.98px){
+    margin-left: 10px;
+    margin-top: 20px;
+  }
+  h2{
+    @media (max-width: 575.98px){
+      font-size: $h4;
+      margin-top: 5px;
+    }
+  }
+}
+
+.whyCont{
+  margin: 50px;
+  margin-bottom: 10%;
+  @media (max-width: 575.98px){
+    margin: 20px;
+  }
+  p{
+    font-size: $h4;
+    @media (max-width: 575.98px){
+      font-size: $p2;
+    }
+  }
+}
+
+// Benefits -------------------------------------------/
+
+.benefits{
+  margin-bottom: 5%;
+}
+
+.benefitImg{
+  img{
+    width: 100%;
+    @media (max-width: 575.98px){
+      width: 92vw;
+      margin: 0px;
+    }
+  }
+}
+
+#benefitHead{
+  @media (max-width: 575.98px){
+    width: 92vw;
+    margin-top: 20px;
+  }
+  h2{
+    @media (max-width: 575.98px){
+      font-size: $h4;
+      margin-top: 5px;
+    }
+  }
+}
+
+.benefitPoints{
+  p{
+    font-size: $p;
+    @media (max-width: 575.98px){
+      font-size: $p2;
+    }
+  }
+  a{
+    width: 90%;
+    font-size: $h4;
+    font-weight: 500;
+    color: $white;
+    margin: 20px;
+    padding: 20px;
+    border-radius: 10px;
+    border-style: none;
+    text-decoration: none;
+    transition: all .3s ease;
+    @media (max-width: 575.98px){
+      font-size: $p2;
+      width: 80vw;
+    }
+    &:hover{
+      color: $yellow;
+      font-weight: 500;
+    }
+  }
+}
+
+// About -------------------------------------------/
+
+
+.about{
+  display: inline-flex;
+  margin-bottom: 5%;
+  .abtCont{
+    display: inline-block;
+    @media (max-width: 575.98px){
+      margin-top: 270px;
+      width: 92vw;
+      padding-left: 0px;
+    }
+    h2{
+      @media (max-width: 575.98px){
+        font-size: $h4;
+        margin-top: 5px;
+      }
+    }
+    #abtIntCont{
+      p{
+        font-size: $p;
+        @media (max-width: 575.98px){
+          width: 92vw;
+          font-size: $p2;
+        }
+      }
+    }
+  }
+  .abtImg{
+    display: inline-block;
+    width: 100%;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    img{
+      @media (max-width: 575.98px){
+        margin-left: -360px;
+        width: 92vw;
+        margin-bottom: 20px;
+      }
+    }
+  }
+}
+
+.cred{
+  background-color: $grey;
+  margin-bottom: 3%;
+  padding-top: 30px;
+  padding-bottom: 30px;  
+  .credentials{
+    padding-left: 24%;
+    h2{
+      @media (max-width: 575.98px){
+        font-size: $h4;
+        margin-top: 5px;
+      }
+    }
+    @media (max-width: 575.98px){
+      width: 360px;
+      padding-left: 20px;
+    }
+    img{
+      margin-top: 20px;
+      @media (max-width: 575.98px){
+        width: 92vw;
+      }
+    }
+  }
+  .awards{
+    h2{
+      @media (max-width: 575.98px){
+        font-size: $h4;
+        margin-top: 5px;
+      }
+    }
+  }
+}
+
+// Offer -------------------------------------------/
+
+.ofr{
+  margin-bottom: 3%;
+  .offer{
+    display: inline-flex;
+    background-color: $yellow;
+    padding: 20px;
+    border-radius: 20px;
+    .offerHead{
+      h2{
+        font-size: $h3;
+        padding: 20px;
+        @media (max-width: 575.98px){
+          font-size: $p;
+          text-align: center;
+          width: 80vw;
+          padding: 0px;
+        }
+      }
+    }
+    .offerCta{
+      text-align: center;
+      vertical-align: middle;
+      border-radius: 10px;
+      padding: 20px;
+      @media (max-width: 575.98px){
+        margin-left: -335px;
+      }
+      .btn{
+        width: 90%;
+        padding: 20px;
+        font-size: $h3;
+        @media (max-width: 575.98px){
+          padding: 10px;
+          font-size: $h4;
+          margin-top: 100px;
+        }
+        &:hover{
+          color: $yellow;
+        }
+      }
+    }
+  }
+}
+
+// footer -------------------------------------------/
+
+.footer{
+  background-color: $grey;
+  padding: 30px;
+  .contact{
+    padding: 20px;
+    .phone{
+      display: inline-flex;
+      i{
+        font-size: $h4;
+        @media (max-width: 575.98px){
+          font-size: $p;
+        }
+      }
+      h4{
+        padding-left: 10px;
+        @media (max-width: 575.98px){
+          font-size: $p;
+        }
+      }
+    }
+    .location{
+      display: inline-flex;
+      i{
+        font-size: $h4;
+        @media (max-width: 575.98px){
+          font-size: $p;
+        }
+      }
+      h4{
+        padding-left: 10px;
+        @media (max-width: 575.98px){
+          font-size: $p;
+        }
+      }
+    }
+  }
+  .footLogo{
+    text-align: center;
+    margin-top: 20px;
+    img{
+      @media (max-width: 575.98px){
+        width: 80vw;
+        margin-bottom: 20px;
+      }
+    }
+  }
+  .copyright{
+    padding: 20px;
+    h4{
+      @media (max-width: 575.98px){
+        font-size: $p;
+      }
+    }
+  }
+}
